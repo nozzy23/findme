@@ -53,7 +53,8 @@ class App extends Component {
         </Router>
       </header>
     </div>
-    }
+    };
+    
 // render() {
 //     return (
 //       <div className="App">
