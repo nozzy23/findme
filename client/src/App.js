@@ -1,14 +1,53 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import {BrowserRouter as Router,Switch,Route,Link} from "react-router-dom";
 import Landingpage from "./pages/Landingpage/Landingpage.js";
 import Dashboardpage from "./pages/Dashboard/Dashboardpage.js";
-import Registerpage from "./pages/Registerpage/Registerpage.js";
+import Registerpage from "./pages/Registercarpage/Registercarpage.js";
+import GlobalContext,{initialState} from './component/context';
+import Signup from "./component/signup"
+import Login from "./component/Login.js"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle';
 
-class App extends Component {
+const App=()=>{
+  const savedState=localStorage.getItem("state");
+
+    const [globalState,dispatch]=React.useReducer(reducer,savedState?JSON.parse(savedState):initialState);
+    return <GlobalContext.Provider value={{globalState,dispatch}}><div className="App">
+    <header className="App-header">
+    <Router>
+      <Route exact path="/" component={Login}/>
+      <Route exact path="/signup" component={Signup}/>
+      <Route exact path="/dashboard" component={Dashboardpage}/>
+      <Route exact path="/register" component={Registerpage}/>
+      </Router>
+    </header>
+  </div>
+  </GlobalContext.Provider>
+}
+
+const reducer=(state,action)=>{
+  if(action.type==="signup"){
+      const newState={
+          ...state,
+          usersList:[...state.usersList,action.payload],
+          currentAccount:action.payload.username
+      };
+     
+      
+      return newState;
+      }else if (action.type==="login"){
+          const newState={
+              ...state,
+              currentAccount:action.payload.username
+          };
+          return newState;
+      }
+      return state;
+  }
+
+class App1 extends Component {
   state = {
     response: '',
     post: '',
@@ -42,52 +81,12 @@ class App extends Component {
     
     this.setState({ responseToPost: body });
   };
+
+
   
     render(){
-     return <div className="App">
-      <header className="App-header">
-      <Router>
-        <Route exact path="/" component={Landingpage}/>
-        <Route exact path="/dashboard" component={Dashboardpage}/>
-        <Route exact path="/register" component={Registerpage}/>
-        </Router>
-      </header>
-    </div>
+     return <div></div>
     };
-    
-// render() {
-//     return (
-//       <div className="App">
-//         <header className="App-header">
-//           <img src={logo} className="App-logo" alt="logo" />
-//           <p>
-//             Edit <code>src/App.js</code> and save to reload.
-//           </p>
-//           <a
-//             className="App-link"
-//             href="https://reactjs.org"
-//             target="_blank"
-//             rel="noopener noreferrer"
-//           >
-//             Learn React
-//           </a>
-//         </header>
-//         <p>{this.state.response}</p>
-//         <form onSubmit={this.handleSubmit}>
-//           <p>
-//             <strong>Post to Server:</strong>
-//           </p>
-//           <input
-//             type="text"
-//             value={this.state.post}
-//             onChange={e => this.setState({ post: e.target.value })}
-//           />
-//           <button type="submit">Submit</button>
-//         </form>
-//         <p>{this.state.responseToPost}</p>
-//       </div>
-//     );
-//   }
 }
 
 export default App;

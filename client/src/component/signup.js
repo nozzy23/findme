@@ -54,7 +54,9 @@ signup=async ()=>{try{
             <div className="form-group">
                 <input value={this.state.unit} onChange={this.handleInputChange} type="unit" className="form-control" name="unit" placeholder="Enter your unit"/>
             </div>
-            <button onClick={this.signup}className="btn btn-primary">Create Account</button>
+            <button onClick={this.signup} className="btn btn-primary">
+                <Link to="/dashboard">Create Account</Link>
+            </button>
             </div>
    
     }

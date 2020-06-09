@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 
 function Buttons (){
     return (
@@ -15,7 +16,7 @@ function Buttons (){
             <a className="dropdown-item" href="#">Favorite 3</a>
             </div>
             </div>
-            <button id="sellStocks" type="button" className="btn btn-warning btn-lg">New Guest<i className="fas fa-hand-holding-usd"></i></button>
+            <button id="sellStocks" type="button" className="btn btn-warning btn-lg"><Link to ="/register">New Guest</Link><i className="fas fa-hand-holding-usd"></i></button>
             </div>
         <br></br>
         <button id="reserve" type="button" className="btn btn-danger btn-lg btn-block">Reserve Spot</button>

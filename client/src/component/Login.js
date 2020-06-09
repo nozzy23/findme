@@ -1,7 +1,6 @@
 import React,{Component} from 'react';
-
 import GlobalContext from './context';
-
+import {Link} from 'react-router-dom';
 
 
 class Login extends Component{
@@ -31,10 +30,6 @@ login=()=>{
         }
 }
 
-
-
-
-
 render(){
     return <div className="card">
     <h1>sign in </h1>
@@ -45,10 +40,13 @@ render(){
         <input value={this.state.password} onChange={this.handleInputChange} type="password" className="form-control" name="password" placeholder="Enter your password"/>
     </div>
     <button onClick={this.login}className="btn btn-primary">Login</button>
+
+    <button className="btn btn-primary"><Link to="/signup">Create Account</Link></button>
     </div>
     }
 }
 
 
 Login.contextType=GlobalContext;
+
 export default Login;

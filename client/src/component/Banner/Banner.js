@@ -5,7 +5,7 @@ function Banner (){
         <div>
             <div className="jumbotron jumbotron-fluid">
             <div className="container">
-                <h1 className="display-4">Welcome Team</h1>
+    <h1 className="display-4">Welcome Placeholder</h1>
                
             </div>
             </div>

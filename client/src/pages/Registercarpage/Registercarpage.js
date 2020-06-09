@@ -1,7 +1,7 @@
 import React from "react";
 import Navbar from '../../component/Navbar/Navbar';
 import Banner from "../../component/Banner/Banner";
-import Forms from "../../pages/Registerpage/Inputform";
+import Forms from "./Inputform";
 
 function Registerpage(){
     return <div className="container">

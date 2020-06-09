@@ -4,20 +4,20 @@ const Schema = mongoose.Schema;
 const dbprofilesSchema = new Schema({
   username: {
     type: String,
-    // trim: true,
-    // required: "username is Required"
+    trim: true,
+    required: "username is Required"
   },
 
   password: {
     type: String,
-    // trim: true,
-    // required: "password is required"
+    trim: true,
+    required: "password is required"
   },
   
   phoneNumber: {
     type: Number,
-    // unique: true,
-    // required: true
+    unique: true,
+    required: true
   },
 
   email: {
@@ -27,13 +27,12 @@ const dbprofilesSchema = new Schema({
 
   unit: {
     type: Number,
-    // required: true
+    required: true
   },
 
   favoriteVehicle: 
-    [type: String,
-    required: false]
-  
+    []
+
 });
 
 const profiles = mongoose.model("Profiles", dbprofilesSchema);

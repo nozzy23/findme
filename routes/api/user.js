@@ -21,7 +21,7 @@ router.post("/register",async (req,res)=>{
         unit} = req.body;
 
 
-       try{ const newUser= await profiles.create(req.body)
+       try {const newUser= await profiles.create(req.body)
 
         res.json(newUser);} catch (err) { console.log(err)
             res.sendStatus(500);

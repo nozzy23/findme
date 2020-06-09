@@ -5,7 +5,7 @@ function Forms (){
         <form classNameName>
         <div className="form-group"/>
           <label for="formGroupExampleInput">First Name</label>
-          <input className type="text" className="form-control" id="formGroupExampleInput" placeholder="Type in first Name here"></input>
+          <input className type="text" class="form-control" id="formGroupExampleInput" placeholder="Type in first Name here"></input>
         <div/>
         <div className="form-group">
           <label for="formGroupExampleInput2"> Last Name</label>
