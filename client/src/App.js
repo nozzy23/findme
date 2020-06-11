@@ -17,10 +17,13 @@ const App=()=>{
     return <GlobalContext.Provider value={{globalState,dispatch}}><div className="App">
     <header className="App-header">
     <Router>
-      <Route exact path="/" component={Login}/>
-      <Route exact path="/signup" component={Signup}/>
-      <Route exact path="/dashboard" component={Dashboardpage}/>
-      <Route exact path="/register" component={Registerpage}/>
+     {!globalState.currentAccount&&[ <Route exact path="/" component={Login}/>,
+      <Route exact path="/signup" component={Signup}/>]}
+      {globalState.currentAccount&&
+      [
+      <Route exact path="/register" component={Registerpage}/>,
+      <Route component={Dashboardpage}/>
+      ]}
       </Router>
     </header>
   </div>
@@ -38,6 +41,7 @@ const reducer=(state,action)=>{
       
       return newState;
       }else if (action.type==="login"){
+        debugger
           const newState={
               ...state,
               currentAccount:action.payload.username
@@ -47,46 +51,46 @@ const reducer=(state,action)=>{
       return state;
   }
 
-class App1 extends Component {
-  state = {
-    response: '',
-    post: '',
-    responseToPost: '',
-  };
+// class App1 extends Component {
+//   state = {
+//     response: '',
+//     post: '',
+//     responseToPost: '',
+//   };
   
-  componentDidMount() {
-    this.callApi()
-      .then(res => this.setState({ response: res.express }))
-      .catch(err => console.log(err));
-  }
+//   componentDidMount() {
+//     this.callApi()
+//       .then(res => this.setState({ response: res.express }))
+//       .catch(err => console.log(err));
+//   }
   
-  callApi = async () => {
-    const response = await fetch('/api/hello');
-    const body = await response.json();
-    if (response.status !== 200) throw Error(body.message);
+//   callApi = async () => {
+//     const response = await fetch('/api/hello');
+//     const body = await response.json();
+//     if (response.status !== 200) throw Error(body.message);
     
-    return body;
-  };
+//     return body;
+//   };
   
-  handleSubmit = async e => {
-    e.preventDefault();
-    const response = await fetch('/api/world', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ post: this.state.post }),
-    });
-    const body = await response.text();
+//   handleSubmit = async e => {
+//     e.preventDefault();
+//     const response = await fetch('/api/world', {
+//       method: 'POST',
+//       headers: {
+//         'Content-Type': 'application/json',
+//       },
+//       body: JSON.stringify({ post: this.state.post }),
+//     });
+//     const body = await response.text();
     
-    this.setState({ responseToPost: body });
-  };
+//     this.setState({ responseToPost: body });
+//   };
 
 
   
-    render(){
-     return <div></div>
-    };
-}
+//     render(){
+//      return <div></div>
+//     };
+// }
 
 export default App;
