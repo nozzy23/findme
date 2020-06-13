@@ -2,6 +2,7 @@ import React,{Component} from 'react';
 import {Link} from 'react-router-dom';
 import GlobalContext from './context';
 import axios from "axios";
+import "../component/mainpage.css"
 
 class Signup extends Component{
 
@@ -37,28 +38,21 @@ signup=async ()=>{try{
 };
 
     render(){
-        return <div className="card">
-            <h1>Create an Account</h1>
-            <div className="form-group">
-                <input value={this.state.username} onChange={this.handleInputChange} type="text" className="form-control" name="username" placeholder="Enter your username"/>
-            </div>
-            <div className="form-group">
-                <input value={this.state.password} onChange={this.handleInputChange} type="password" className="form-control" name="password" placeholder="Enter your password"/>
-            </div>
-            <div className="form-group">
-                <input value={this.state.phoneNumber} onChange={this.handleInputChange} type="tel" className="form-control" name="phoneNumber" placeholder="Enter your number"/>
-            </div>
-            <div className="form-group">
-                <input value={this.state.email} onChange={this.handleInputChange} type="email" className="form-control" name="email" placeholder="Enter your email"/>
-            </div>
-            <div className="form-group">
-                <input value={this.state.unit} onChange={this.handleInputChange} type="unit" className="form-control" name="unit" placeholder="Enter your unit"/>
-            </div>
-            <button onClick={this.signup} className="btn btn-primary">
-                <Link to="/dashboard">Create Account</Link>
-            </button>
-            </div>
-   
+        return <div class="wrapper">
+        <div id="formContent">
+         <h2 class="active">Create an Account</h2>
+          <form>
+            <input type="text" value={this.state.username} onChange={this.handleInputChange} class="fadeIn second" name="username" placeholder="Username"/>
+            <input type="text" value={this.state.password} onChange={this.handleInputChange} class="fadeIn second" name="password" placeholder="Password"/>
+            <input type="text" value={this.state.phoneNumber} onChange={this.handleInputChange} class="fadeIn second" name="phoneNumber" placeholder="Phone Number"/>
+            <input type="text" value={this.state.email} onChange={this.handleInputChange} class="fadeIn second" name="email" placeholder="Email"/>
+            <input type="text" value={this.state.unit} onChange={this.handleInputChange} class="fadeIn second" name="unit" placeholder="Unit Number"/>
+        </form>
+       <div id="formFooter">
+      <Link to="/signup" onClick={this.signup}>Submit</Link>
+      </div>  
+    </div>
+</div>
     }
 }
 

@@ -2,7 +2,7 @@ import React,{Component} from 'react';
 import GlobalContext from './context';
 import {Link} from 'react-router-dom';
 import Api from '../api';
-
+import "../component/mainpage.css"
 
 class Login extends Component{
 
@@ -35,18 +35,21 @@ class Login extends Component{
     }
 
 render(){
-    return <div className="card">
-    <h1>sign in </h1>
-    <div className="form-group">
-        <input value={this.state.username} onChange={this.handleInputChange} type="text" className="form-control" name="username" placeholder="Enter your username"/>
+    return <div class="wrapper">
+    <div id="formContent">
+     <h2 class="active">Find Me A Parking</h2>
+      
+  <form>
+        <input type="text" value={this.state.username} onChange={this.handleInputChange} class="fadeIn second" name="username" placeholder="Username"/>
+        <input type="text" value={this.state.password} onChange={this.handleInputChange} class="fadeIn third" name="password" placeholder="Password"/>
+        <input type="submit"  onClick={this.login} class="fadeIn fourth" value="Log In"/>
+        </form>
+    <div id="formFooter">
+      <Link to="/signup"> Create  Account</Link>
+      </div>
+  
     </div>
-    <div className="form-group">
-        <input value={this.state.password} onChange={this.handleInputChange} type="password" className="form-control" name="password" placeholder="Enter your password"/>
-    </div>
-    <button onClick={this.login}className="btn btn-primary">Login</button>
-
-    <button className="btn btn-primary"><Link to="/signup">Create Account</Link></button>
-    </div>
+  </div>
     }
 }
 
