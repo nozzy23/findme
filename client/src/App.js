@@ -16,14 +16,16 @@ const App=()=>{
     const [globalState,dispatch]=React.useReducer(reducer,savedState?JSON.parse(savedState):initialState);
     return <GlobalContext.Provider value={{globalState,dispatch}}><div className="App">
     <header className="App-header">
-    <Router>
+    <Router><Switch>
      {!globalState.currentAccount&&[ <Route exact path="/" component={Login}/>,
       <Route exact path="/signup" component={Signup}/>]}
       {globalState.currentAccount&&
       [
+      
       <Route exact path="/register" component={Registerpage}/>,
       <Route component={Dashboardpage}/>
       ]}
+      </Switch>
       </Router>
     </header>
   </div>

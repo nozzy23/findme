@@ -7,8 +7,8 @@ import '../../pages/Dashboard/Dash.css';
 
 function Main (){
     return (
-     
-        <div className="container">
+         <div class="container">
+        
         <Navbar/>
        <br></br>
         <Banner/>
@@ -17,6 +17,8 @@ function Main (){
         <br></br>
         <Table/>
         </div>
+       
+   
 
     );
   }
