@@ -18,7 +18,8 @@ class Login extends Component{
     }
 
 
-    login=()=>{
+    login=(event)=>{
+        event.preventDefault();
         if(!this.state.username||!this.state.password) {
             alert("Please enter your username and password");
         } else {
