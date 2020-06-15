@@ -18,7 +18,8 @@ class Login extends Component{
     }
 
 
-login=()=>{
+login=(event)=>{
+    event.preventDefault();
     const user=this.context.globalState.usersList.find(user=>user.username===this.state.username);
         if(user){
             if(user.password===this.state.password){
