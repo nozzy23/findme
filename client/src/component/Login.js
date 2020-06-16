@@ -29,6 +29,7 @@ class Login extends Component{
                     this.context.dispatch({type:"login",payload:user})
                 } else {
                     alert("Invalid credentials!!")
+                    console.log(user)
                 }
                 
             })
