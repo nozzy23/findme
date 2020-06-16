@@ -2,7 +2,7 @@
 :root {
     --main-orange: rgb(245, 160, 3);
     --main-orange-hover: rgb(173, 110, 28);
-    --main-dark: rgba(20,20,20);
+    --main-dark: rgb(0, 0, 0);
     --main-deep-dark: rgb(0, 0, 0);
     --main-grey: rgba(153,153,153);
     --main-green: rgb(77, 164, 28);
@@ -29,7 +29,7 @@ a{
 /* Header Section */
 .header-container{
     width:100vw;
-    height: 60vw;
+    height: 65vw;
     position:relative;
     background:radial-gradient(rgba(0, 0, 0, 0),rgba(0, 0, 0, 0.7)),
         url(../svg/parktrees.jpg) no-repeat center center/cover;

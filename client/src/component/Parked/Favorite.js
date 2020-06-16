@@ -1,16 +1,16 @@
 import React from 'react';
 
-function Table (){
+function Favs (){
     return (
         <div>
            <div class="card" q>
   <div class="card-header">
-    Currently Parked
+   Favorites   
             </div>
             <ul class="list-group list-group-flush">
-                <li class="list-group-item">Oscar Nunez</li>
-                <li class="list-group-item">Raul Nino   </li>
-                <li class="list-group-item">Nick P</li>
+                <li class="list-group-item">Thadd Holmes</li>
+                <li class="list-group-item">Nathalia Rosa   </li>
+                <li class="list-group-item">Kat Saurez</li>
             </ul>
             
             </div>
@@ -19,4 +19,4 @@ function Table (){
 
     );
 }
-export default Table;
+export default Favs;

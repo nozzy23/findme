@@ -1,7 +1,8 @@
 import React, { Component } from "react";
-// import logo from "../svg/image.png";
 import { Link } from 'react-router-dom';
 import  styled  from "styled-components";
+import Table from '../../src/component/Parked/Parked'
+import Favs from '../../src/component/Parked/Favorite'
 
 
 class Header extends Component {
@@ -9,7 +10,7 @@ class Header extends Component {
         return(
             <HeaderComponent className="header-container">
                 <div className="header-top">
-                    {/* <Logo src={logo} /> */}
+              
                     <Link className="signIn-btn">Edit Profile</Link>
                 </div>
                 {/* header Content */}
@@ -20,6 +21,14 @@ class Header extends Component {
                 <Link style={{display:"inline"}} to ="/register" className="regGuest-btn">Register Guest</Link>
                 <Link style={{display:"inline"}} to ="/lot" className="regGuest-btn green">Reserve Spot</Link>
                 </div>
+                <div>
+                <TableHolder className="table-content">
+                <Table style={{display:"inline"}} className="Parked" />
+                </TableHolder>
+                <Favoriteholder className="fav-content">
+                <Favs style={{display:"inline"}} className="Favs" />
+                </Favoriteholder>
+                </div>
                 </div>
             </HeaderComponent>
         )
@@ -27,18 +36,7 @@ class Header extends Component {
 }
 
 export default Header;
-//logo
-const Logo = styled.img`
-    width:25rem;
-    height:7rem;
-    position: absolute;
-    top: 25%;
-    left: 35%;
-    transform: translate (-50%,-50%);
-    color:#fff;
 
-
-`;
 
 //header Container
 const HeaderComponent =styled.div`
@@ -108,6 +106,7 @@ const HeaderComponent =styled.div`
 
     .green{
         background: var(--main-green);
+        margin: 2%;
         &:hover {
             background: var(--main-green-hover);
             color:#fff;
@@ -141,3 +140,22 @@ const HeaderComponent =styled.div`
     
     `;
 
+    //Table 
+    const TableHolder = styled.div`
+    display: inline-block;
+    width: 35%;
+    position: relative;
+    margin:  4.5rem auto 0;
+    text-align:left;
+    padding: .3rem;
+    margin: 2%;
+    `;
+     //Table 
+     const Favoriteholder = styled.div`
+     display: inline-block;
+     width: 35%;
+     position: relative;
+     margin:  4.5rem auto 0;
+     text-align:left;
+     padding: .3rem;
+     `;
