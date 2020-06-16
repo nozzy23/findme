@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-// import logo from "../svg/netflix.png";
+// import logo from "../svg/image.png";
 import { Link } from 'react-router-dom';
 import  styled  from "styled-components";
 
