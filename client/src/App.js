@@ -9,6 +9,7 @@ import Signup from "./component/signup"
 import Login from "./component/Login.js"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle';
+import Parkinglot from "./component/Parkinglot/Parking";
 
 const App=()=>{
   const savedState=localStorage.getItem("state");
@@ -23,6 +24,7 @@ const App=()=>{
       [
       
       <Route exact path="/register" component={Registerpage}/>,
+      <Route exact path="/lot"component={Parkinglot}/>,
       <Route component={Dashboardpage}/>
       ]}
       </Switch>

@@ -19,7 +19,7 @@ function Buttons (){
             <button id="sellStocks" type="button" className="btn btn-warning btn-lg"><Link to ="/register">New Guest</Link><i className="fas fa-hand-holding-usd"></i></button>
             </div>
         <br></br>
-        <button id="reserve" type="button" className="btn btn-danger btn-lg btn-block">Reserve Spot</button>
+        <button id="reserve" type="button" className="btn btn-danger btn-lg btn-block"><Link to ="/lot">Reserve Spot</Link></button>
         </div>
 
         );
