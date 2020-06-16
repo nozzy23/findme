@@ -37,7 +37,7 @@ a:hover {
   justify-content: center;
   width: 100%;
   min-height: 100%;
-  padding: 80px;
+  padding: 100px;
   background-image: url("/assets/IMG_6022.JPG");
   
 }
@@ -257,3 +257,29 @@ input[type=text]:placeholder {
 *:focus {
     outline: none;
 } 
+
+
+@keyframes blink {
+  0% {
+    
+      opacity: 1;
+  }
+  50% {
+   
+    opacity: 0;
+  }
+  100% {
+      opacity: 1;
+      
+  }
+}
+.image1 {
+  border: 3px solid green ;
+  animation: blink 1s;
+  animation-iteration-count: infinite;
+  
+}
+
+.image3{
+  border: 3px solid red ;
+}

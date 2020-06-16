@@ -25,7 +25,7 @@ function Navbar (){
               <div className="dropdown-menu" aria-labelledby="navbarDropdown">
                 <a className="dropdown-item"><Link>Edit Profile</Link></a>
                 <div className="dropdown-divider"></div>
-                <a className="dropdown-item"><Link to="/">Log Out</Link></a>
+                <a className="dropdown-item"><Link to="/">Return Home</Link></a>
               </div>
             </li>
             

@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import './css/App.css';
 import {BrowserRouter as Router,Switch,Route,Link} from "react-router-dom";
-import Landingpage from "./pages/Landingpage/Landingpage.js";
 import Dashboardpage from "./pages/Dashboard/Dashboardpage.js";
 import Registerpage from "./pages/Registercarpage/Registercarpage.js";
 import GlobalContext,{initialState} from './component/context';
@@ -9,6 +8,7 @@ import Signup from "./component/signup"
 import Login from "./component/Login.js"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle';
+import Parkinglot from "./Parkinglot/Parking";
 
 const App=()=>{
   const savedState=localStorage.getItem("state");
@@ -23,6 +23,7 @@ const App=()=>{
       [
       
       <Route exact path="/register" component={Registerpage}/>,
+      <Route exact path="/lot" component={Parkinglot}/>,
       <Route component={Dashboardpage}/>
       ]}
       </Switch>
@@ -53,46 +54,6 @@ const reducer=(state,action)=>{
       return state;
   }
 
-// class App1 extends Component {
-//   state = {
-//     response: '',
-//     post: '',
-//     responseToPost: '',
-//   };
-  
-//   componentDidMount() {
-//     this.callApi()
-//       .then(res => this.setState({ response: res.express }))
-//       .catch(err => console.log(err));
-//   }
-  
-//   callApi = async () => {
-//     const response = await fetch('/api/hello');
-//     const body = await response.json();
-//     if (response.status !== 200) throw Error(body.message);
-    
-//     return body;
-//   };
-  
-//   handleSubmit = async e => {
-//     e.preventDefault();
-//     const response = await fetch('/api/world', {
-//       method: 'POST',
-//       headers: {
-//         'Content-Type': 'application/json',
-//       },
-//       body: JSON.stringify({ post: this.state.post }),
-//     });
-//     const body = await response.text();
-    
-//     this.setState({ responseToPost: body });
-//   };
 
-
-  
-//     render(){
-//      return <div></div>
-//     };
-// }
 
 export default App;

@@ -18,7 +18,7 @@ class Header extends Component {
                 <Subtitle>Let's get Started</Subtitle>
                 <div>
                 <Link style={{display:"inline"}} to ="/register" className="regGuest-btn">Register Guest</Link>
-                <Link style={{display:"inline"}} className="regGuest-btn green">Reserve Spot</Link>
+                <Link style={{display:"inline"}} to ="/lot" className="regGuest-btn green">Reserve Spot</Link>
                 </div>
                 </div>
             </HeaderComponent>
