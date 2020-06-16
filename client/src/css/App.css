@@ -1,10 +1,12 @@
 /*global var */
 :root {
-    --main-orange: rgb(226, 155, 23);
-    --main-orange-hover: rgb(110, 66, 9);
+    --main-orange: rgb(245, 160, 3);
+    --main-orange-hover: rgb(173, 110, 28);
     --main-dark: rgba(20,20,20);
     --main-deep-dark: rgb(0, 0, 0);
     --main-grey: rgba(153,153,153);
+    --main-green: rgb(77, 164, 28);
+    --main-green-hover: rgb(34, 83, 5);
 
 }
 
@@ -43,3 +45,8 @@ a{
     background: rgba(0, 0, 0, 0.2);
     box-shadow: inset 4.375rem 3.125rem 11.975rem #000, inset -4.375rem -3.125rem -11.975rem;
 }
+
+
+
+
+    

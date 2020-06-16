@@ -16,7 +16,10 @@ class Header extends Component {
                 <div className="header-content">
                 <Title> Welcome Alex</Title>
                 <Subtitle>Let's get Started</Subtitle>
-                <Link className="regGuest-btn">Register Guest</Link>
+                <div>
+                <Link style={{display:"inline"}} to ="/register" className="regGuest-btn">Register Guest</Link>
+                <Link style={{display:"inline"}} className="regGuest-btn green">Reserve Spot</Link>
+                </div>
                 </div>
             </HeaderComponent>
         )
@@ -68,14 +71,14 @@ const HeaderComponent =styled.div`
 
     //Header Content    
     .header-content {
-        width: 65%;
+        width: 100%;
         position: relative;
         margin: 4.5rem auto 0;
-        display: flex;
-        justify-content: center;
+
+
         align-content: center;
         text-align: center;
-        flex-direction: column;
+       
         z-index:1;
     }
     //Register car
@@ -85,18 +88,31 @@ const HeaderComponent =styled.div`
         text-transform: uppercase;
         border: none;
         outline: none;
-        margin: 0 20%;
+        margin: 2%;
         padding: 1.5rem;
         border-radius: 0.1875rem;
         font-size: 2.2rem;
         text-align: center;
         box-shadow: 0 1px 0 rgba(0, 0, 0, 0.45);
-        transition: background 0.2s ease-in;
-        cursor: pointer;
         color:#fff;
+        transition: background 0.2s ease-in;
+        &:hover {
+            background: var(--main-orange-hover);
+            color:#fff;
+        }
+        cursor: pointer;
+       
 
     }
+    
 
+    .green{
+        background: var(--main-green);
+        &:hover {
+            background: var(--main-green-hover);
+            color:#fff;
+        }
+    }
 
 
 
