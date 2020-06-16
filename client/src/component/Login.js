@@ -2,7 +2,7 @@ import React,{Component} from 'react';
 import GlobalContext from './context';
 import {Link} from 'react-router-dom';
 import Api from '../api';
-import "../component/mainpage.css"
+import "../css/mainpage.css"
 
 class Login extends Component{
 

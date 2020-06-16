@@ -32,6 +32,7 @@ const Logo = styled.img`
     top: 25%;
     left: 35%;
     transform: translate (-50%,-50%);
+    color:#fff;
 
 
 `;
@@ -50,9 +51,11 @@ const HeaderComponent =styled.div`
         position: absolute;
         translate: transform(-50%,-50%);
         cursor: pointer;
+        color:#fff;
         transition: background 0.2s ease-in;
         &:hover {
             background: var(--main-orange-hover);
+            color:#fff;
         }
     }
 
@@ -90,6 +93,7 @@ const HeaderComponent =styled.div`
         box-shadow: 0 1px 0 rgba(0, 0, 0, 0.45);
         transition: background 0.2s ease-in;
         cursor: pointer;
+        color:#fff;
 
     }
 
@@ -105,6 +109,7 @@ const HeaderComponent =styled.div`
         font-size: 6rem;
         font-weight:800;
         line-height: 1.1em;
+        color:#fff;
     
     `;
 
@@ -115,6 +120,7 @@ const HeaderComponent =styled.div`
         font-weight:400;
         line-height: 1.25em;
         text-transform: uppercase;
+        color:#fff;
     
     
     `;

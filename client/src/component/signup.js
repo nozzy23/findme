@@ -2,7 +2,7 @@ import React,{Component} from 'react';
 import {Link} from 'react-router-dom';
 import GlobalContext from './context';
 import axios from "axios";
-import "../component/mainpage.css"
+import "../css/mainpage.css"
 
 class Signup extends Component{
 
