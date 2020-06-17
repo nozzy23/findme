@@ -5,10 +5,10 @@ function Favs (){
         <div>
            <div class="card" q>
   <div class="card-header">
-   Favorites   
+   <h3>Favorite</h3>
             </div>
             <ul class="list-group list-group-flush">
-                <li class="list-group-item">Thadd Holmes</li>
+                <li class="list-group-item">Thadd Holmes</li> 
                 <li class="list-group-item">Nathalia Rosa   </li>
                 <li class="list-group-item">Kat Saurez</li>
             </ul>

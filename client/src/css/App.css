@@ -46,7 +46,26 @@ a{
     box-shadow: inset 4.375rem 3.125rem 11.975rem #000, inset -4.375rem -3.125rem -11.975rem;
 }
 
+.reg-container{
+    width:100vw;
+    height: 65vw;
+    position:relative;
+    background:radial-gradient(rgba(0, 0, 0, 0),rgba(0, 0, 0, 0.7)),
+        url(../svg/parktrees.jpg) no-repeat center center/cover;
+}
 
 
 
-    
+.regTitle {
+    margin:0 0 1.2rem;
+    font-size: 7rem;
+    font-weight:600;
+    line-height: 1.1em;
+    color:#fff;
+    text-align: center;
+}
+
+
+.card-reg{
+    padding: 30px;
+}

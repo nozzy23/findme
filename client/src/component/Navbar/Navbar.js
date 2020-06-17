@@ -13,9 +13,7 @@ function Navbar (){
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav ml-auto">
             <li className="nav-item active">
-              <button>
-              <a className="nav-link"><Link to ="/dashboard">Home</Link><span className="sr-only">(current)</span></a>
-              </button>
+          
             </li>
             
             <li className="nav-item dropdown">
@@ -25,7 +23,7 @@ function Navbar (){
               <div className="dropdown-menu" aria-labelledby="navbarDropdown">
                 <a className="dropdown-item"><Link>Edit Profile</Link></a>
                 <div className="dropdown-divider"></div>
-                <a className="dropdown-item"><Link to="/">Return Home</Link></a>
+                <a className="dropdown-item"><Link to="/dashboard">Return Home</Link></a>
               </div>
             </li>
             
