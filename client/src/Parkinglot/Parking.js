@@ -8,6 +8,7 @@ function Parkinglot() {
     const imageTwo = '/assets/pic3.JPG'
 
     return (
+    <div className="reservespot">
     <div className="container">
          <Navbar/>
     <div class="card-header">
@@ -15,6 +16,7 @@ function Parkinglot() {
     </div>
        
         <br></br>
+        <div className="card">
         <div class="card-body">
             <div class="row">
                 <div class="col-md-6">
@@ -28,6 +30,9 @@ function Parkinglot() {
                 <div class="col-md-6">
                     <img className="image3" src={imageTwo} alt="" />
                 </div>
+                </div>
+
+                <div className="card">
                 <div class="col-md-6">
                     <dl>
                         <dt>Green</dt>
@@ -41,12 +46,12 @@ function Parkinglot() {
                         <dd>- Head In Parking Only</dd>
                         <dd>- No More 24hr </dd>
                     </dl>
-
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-    
+    </div>
 
 
     
