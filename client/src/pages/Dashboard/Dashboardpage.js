@@ -1,26 +1,15 @@
-import React from 'react';
-import Navbar from '../../component/Navbar/Navbar';
-import Banner from "../../component/Banner/Banner";
-import Buttons from '../../component/Buttons/Buttons';
-import Table from '../../component/Parked/Parked';
-import '../../pages/Dashboard/Dash.css';
+import React, { Component } from "react";
+import Header from '../../component/Header'
 
-function Main (){
-    return (
-         <div class="container">
-        
-        <Navbar/>
-       <br></br>
-        <Banner/>
-        <br></br>
-        <Buttons/>
-        <br></br>
-        <Table/>
-        </div>
-       
-   
 
-    );
-  }
-
+class Main extends Component {
+    render(){
+        return(
+            <div>
+                <Header/>
+               
+            </div>
+        )
+    }
+}
 export default Main;

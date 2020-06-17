@@ -2,7 +2,7 @@ import React,{Component} from 'react';
 import GlobalContext from './context';
 import {Link} from 'react-router-dom';
 import Api from '../api';
-import "../component/mainpage.css"
+import "../css/mainpage.css"
 
 class Login extends Component{
 
@@ -18,7 +18,8 @@ class Login extends Component{
     }
 
 
-    login=()=>{
+    login=(event)=>{
+        event.preventDefault();
         if(!this.state.username||!this.state.password) {
             alert("Please enter your username and password");
         } else {
@@ -28,6 +29,7 @@ class Login extends Component{
                     this.context.dispatch({type:"login",payload:user})
                 } else {
                     alert("Invalid credentials!!")
+                    console.log(user)
                 }
                 
             })
