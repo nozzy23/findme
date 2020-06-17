@@ -14,7 +14,7 @@ function Forms (){
           <input type="text" className="form-control" id="formGroupExampleInput2" placeholder="Type in last Name here"></input>
         </div>
         <div className="form-group">
-          <label for="formGroupExampleInput2">Address  "" </label>
+          <label for="formGroupExampleInput2">Address  </label>
           <input type="text" className="form-control" id="formGroupExampleInput2" placeholder="Input address here"></input>
         </div> <div className="form-group">
           <label for="formGroupExampleInput2"> License Plate</label>

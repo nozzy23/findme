@@ -15,7 +15,7 @@ class Header extends Component {
                 </div>
                 {/* header Content */}
                 <div className="header-content">
-                <Title> Welcome Alex</Title>
+                <Title> Welcome Nick</Title>
                 <Subtitle>Let's get Started</Subtitle>
                 <div>
                 <Link style={{display:"inline"}} to ="/register" className="regGuest-btn">Register Guest</Link>

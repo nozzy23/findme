@@ -8,6 +8,9 @@ const routes = require("./routes");
 const authenticatedRoutes=require('./server/AuthRoutes/index');
 const cors=require("cors");
 const db= require('./models')
+const chalk = require ('chalk');
+const debug= require('debug')('http')
+const log = console.log;
 app.use(cors());
 
 app.use(bodyParser.json());
@@ -24,7 +27,7 @@ mongoose
     useCreateIndex: true,
   })
   .then(() => {
-    console.log("Mongo connection established successfully.");
+    log(chalk.green("Mongo connection established successfully."));
   })
   .catch(console.error);
 
@@ -48,25 +51,25 @@ mongoose
           username:username
         }).then(user=>{
           if (!user) {
-            console.log("no user")
+            log(chalk.red("no user"))
               return cb(null, false, {message: 'Incorrect email or password.'});
           }
           if(user.password===(password)) {
-            console.log(user)
+            log(chalk.black(user))
            return cb(null, user, {message: 'Logged In Successfully'});
           } else {
-            console.log("wrong password")
+            log(chalk.red("wrong password"))
             return cb(null, false, {message: 'Incorrect email or password.'});
           }
           
         },error=>{
-          console.log(error)
+          log(chalk.red(error))
           cb(null, false, {message: 'Incorrect email or password1.'})}).catch(error=>{
-          console.log(error)
+            log(chalk.red(error))
           cb(null, false, {message: 'Incorrect email or password2.'})
         });
       } catch(error){
-      console.log(error)
+        log(chalk.red(error))
       }
     }));
   
@@ -126,4 +129,4 @@ mongoose
   })
 
 
-app.listen(port, () => console.log(`Listening on port ${port}`));
+app.listen(port, () => log(chalk.green(`Listening on port ${port}`)));
