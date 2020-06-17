@@ -69,3 +69,11 @@ a{
 .card-reg{
     padding: 30px;
 }
+
+.reservespot{
+    width:100vw;
+    height: 65vw;
+    position:relative;
+    background:radial-gradient(rgba(0, 0, 0, 0),rgba(0, 0, 0, 0.7)),
+        url(../svg/parktrees.jpg) no-repeat center center/cover;
+}
